@@ -17,9 +17,13 @@
         <include>Difficulty</include>
         <event-block sid="491113185275716">
             <conditions>
-                <condition disabled="1" id="-1" name="Every tick" sid="654802726859094" type="System" />
+                <condition id="-1" name="Every tick" sid="654802726859094" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Set text" sid="777709292197549" type="Txt_balloons">
+                    <param id="0" name="Text">Balloons &amp;&quot; balloons&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="850646527016503">
             <conditions>
