@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Just A Ballon Destroyer Game</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>DJFLuFFy_vs_joe</author>
+    <author-email>info@vsjoe.nl</author-email>
+    <author-website>http://vsjoe.nl</author-website>
+    <app-id>nl.vsjoe.games.jabdg</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>25000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Game_Screen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Game_screen">
+            <object-type name="Sound" sid="121779958306254">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Spr_balloon" sid="374850794683217">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="619365271628392">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760329547834915" speed="5">
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="D:\Users\FLuFFy\Documents\Construct\Resources\Sprites\Custom\blue_balloon.png">
+                            <collision-poly>
+                                <point x="0.192771" y="0.166667" />
+                                <point x="0.493976" y="0.0729167" />
+                                <point x="0.759036" y="0.208333" />
+                                <point x="0.819277" y="0.5" />
+                                <point x="0.674699" y="0.71875" />
+                                <point x="0.493976" y="0.916667" />
+                                <point x="0.277108" y="0.760417" />
+                                <point x="0.0963855" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="9" loop="0" name="pop" pingpong="0" repeatcount="1" repeatto="0" sid="776809561742016" speed="60">
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Spr_deathbar" sid="905841419783464">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282258830358670" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.666667" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TiledBackground" sid="356448609930926">
+                <plugin id="TiledBg" />
+                <texture original-source="D:\Users\FLuFFy\Documents\Construct\Resources\Backgrounds\pink Background.png" />
+            </object-type>
+            <object-type name="Touch" sid="832446801217358">
+                <plugin id="Touch" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Game_over_screen">
+            <object-type name="txt_game_over" sid="111120734341224">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="btn_try_again" sid="774421525095141">
+                <plugin id="Button" />
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Game_Screen.xml</layout>
+        <layout>Game_over.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Main_Events.xml</event-sheet>
+        <event-sheet>Difficulty.xml</event-sheet>
+        <event-sheet>Game_over_Events.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="1">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Sound" uid="4">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="snd_pop.m4a" />
+        <file name="snd_pop.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="snd_background.m4a" />
+        <file name="snd_background.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

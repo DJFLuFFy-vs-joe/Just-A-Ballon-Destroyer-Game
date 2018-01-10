@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Difficulty</name>
+    <events>
+        <event-block sid="777651707107103">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="320365630475557" type="System">
+                    <param id="0" name="Variable">Xp</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">Max_xp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="604367037092510" type="System">
+                    <param id="0" name="Variable">Max_xp</param>
+                    <param id="1" name="Value">Max_xp + 25 + Max_xp </param>
+                </action>
+                <action id="-10" name="Add to" sid="472652863574589" type="System">
+                    <param id="0" name="Variable">Multiplier</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="236618390024700" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Value">0.25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="102807754702206">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="705778071047784" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="805464248023690" type="System">
+                    <param id="0" name="Variable">Min_speed</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+                <action id="-9" name="Set value" sid="351771944758151" type="System">
+                    <param id="0" name="Variable">Max_speed</param>
+                    <param id="1" name="Value">120</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="587089279014409">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="785958645178852" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="517146421138898" type="System">
+                    <param id="0" name="Variable">Max_spawn_rate</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="559816107485545" type="System">
+                    <param id="0" name="Variable">Min_speed</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="324260689952470">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="815357642984294" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="849215494635125" type="System">
+                    <param id="0" name="Variable">Min_speed</param>
+                    <param id="1" name="Value">130</param>
+                </action>
+                <action id="-9" name="Set value" sid="581175119285390" type="System">
+                    <param id="0" name="Variable">Max_speed</param>
+                    <param id="1" name="Value">240</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606046512222879">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="379166048659165" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="307930196850739" type="System">
+                    <param id="0" name="Variable">Max_spawn_rate</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="255429261810363">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="825285442117831" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="877321131065238" type="System">
+                    <param id="0" name="Variable">Min_speed</param>
+                    <param id="1" name="Value">150</param>
+                </action>
+                <action id="-9" name="Set value" sid="220969377313751" type="System">
+                    <param id="0" name="Variable">Max_speed</param>
+                    <param id="1" name="Value">260</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="587985163440709">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="258418221374202" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="442893044659030" type="System">
+                    <param id="0" name="Variable">Max_spawn_rate</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="256297498936995">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="976692322877551" type="System">
+                    <param id="0" name="Variable">Difficulty</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="151309731642063" type="System">
+                    <param id="0" name="Variable">Min_speed</param>
+                    <param id="1" name="Value">200</param>
+                </action>
+                <action id="-9" name="Set value" sid="825703074137328" type="System">
+                    <param id="0" name="Variable">Max_spawn_rate</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351836347779582">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="617552915747127" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">99</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="472547171127541" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="901572170681783">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="477571456884025" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="778458333633014" type="System">
+                    <param id="0" name="Variable">Game_state</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="443790657194498" type="System">
+                    <param id="0" name="Layout">Game_over</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

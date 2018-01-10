@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main_Events</name>
+    <events>
+        <variable constant="0" name="Game_state" sid="966035135244516" static="0" type="number">0</variable>
+        <variable constant="0" name="Max_xp" sid="306311539028621" static="0" type="number">30</variable>
+        <variable constant="0" name="Xp" sid="570169120645085" static="0" type="number">0</variable>
+        <variable constant="0" name="Max_speed" sid="648633176014365" static="0" type="number">95</variable>
+        <variable constant="0" name="Min_speed" sid="384905898086081" static="0" type="number">40</variable>
+        <variable constant="0" name="Max_spawn_rate" sid="242210763151873" static="0" type="number">5</variable>
+        <variable constant="0" name="Difficulty" sid="822115998621639" static="0" type="number">1</variable>
+        <variable constant="0" name="Multiplier" sid="784721001974095" static="0" type="number">1</variable>
+        <variable constant="0" name="Balloons_spend" sid="453826245237129" static="0" type="number">0</variable>
+        <variable constant="0" name="Balloons" sid="241258594312421" static="0" type="number">0</variable>
+        <variable constant="0" name="Health" sid="692774502006761" static="0" type="number">100</variable>
+        <include>Difficulty</include>
+        <event-block sid="491113185275716">
+            <conditions>
+                <condition disabled="1" id="-1" name="Every tick" sid="654802726859094" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="850646527016503">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="794060881362506" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="736496488364238" type="Spr_balloon" />
+                <action id="7" name="Play (by name)" sid="188319070308629" type="Sound">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;snd_background&quot;</param>
+                    <param id="3" name="Loop">1</param>
+                    <param id="4" name="Volume">50</param>
+                    <param id="2" name="Tag (optional)">&quot;bck&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="740380167975827">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="937910435187635" type="System">
+                    <param id="0" name="Interval (seconds)">random(0.01, Max_spawn_rate)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="596201802142751" type="System">
+                    <param id="0" name="Object to create">Spr_balloon</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(72,696)</param>
+                    <param id="3" name="Y">685 </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="612431941973694">
+            <conditions>
+                <condition id="17" name="On tap object" sid="548939531495458" type="Touch">
+                    <param id="0" name="Object">Spr_balloon</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="139007699272629" type="System">
+                    <param id="0" name="Variable">Game_state</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="566333911901342" type="Spr_balloon">
+                    <param id="0" name="Animation">&quot;pop&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="133158560625609" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="555591852641042" type="Sound">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;snd_pop&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">100</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="608672349368875">
+            <conditions>
+                <condition id="-18" name="On created" sid="285448978860207" type="Spr_balloon" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="847994450523847" type="Spr_balloon">
+                    <param id="0" name="Angle">90*3</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="528512519930460" type="Spr_balloon">
+                    <param id="0" name="Speed">random(Min_speed,Max_speed)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="857481127966081">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="808958070056915" type="Spr_balloon">
+                    <param id="0" name="Object">Spr_deathbar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="138648717059235" type="Spr_balloon" />
+                <action id="-11" name="Subtract from" sid="636228924062811" type="System">
+                    <param id="0" name="Variable">Health</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="662245388581882">
+            <conditions>
+                <condition id="4" name="On finished" sid="137892855983914" type="Spr_balloon">
+                    <param id="0" name="Animation">&quot;pop&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="761059236976408" type="Spr_balloon" />
+                <action id="-10" name="Add to" sid="554889041454561" type="System">
+                    <param id="0" name="Variable">Xp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="265490603120086" type="System">
+                    <param id="0" name="Variable">Balloons</param>
+                    <param id="1" name="Value">1*Multiplier</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

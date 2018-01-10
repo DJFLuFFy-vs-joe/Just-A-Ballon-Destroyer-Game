@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game_over_Events</name>
+    <events>
+        <event-block sid="611755729529123">
+            <conditions>
+                <condition id="0" name="On clicked" sid="761958794641464" type="btn_try_again" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="237047440848687" type="System" />
+                <action id="-2" name="Go to layout" sid="202715585473777" type="System">
+                    <param id="0" name="Layout">Game_Screen</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="741584443989683">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="850696841517341" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="902322434102598" type="Sound" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
