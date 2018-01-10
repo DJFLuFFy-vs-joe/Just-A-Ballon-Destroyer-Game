@@ -101,6 +101,9 @@
             <object-type name="Touch" sid="832446801217358">
                 <plugin id="Touch" />
             </object-type>
+            <object-type name="Txt_balloons" sid="918104658698978">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Game_over_screen">
             <object-type name="txt_game_over" sid="111120734341224">
