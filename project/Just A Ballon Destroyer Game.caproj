@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -103,6 +104,9 @@
             </object-type>
             <object-type name="Txt_balloons" sid="918104658698978">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="xp_bar" sid="945879150553700">
+                <plugin id="progressbar" />
             </object-type>
         </object-folder>
         <object-folder name="Game_over_screen">

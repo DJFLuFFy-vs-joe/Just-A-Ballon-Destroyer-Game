@@ -23,6 +23,12 @@
                 <action id="0" name="Set text" sid="777709292197549" type="Txt_balloons">
                     <param id="0" name="Text">Balloons &amp;&quot; balloons&quot;</param>
                 </action>
+                <action id="4" name="Set maximum" sid="812209771765675" type="xp_bar">
+                    <param id="0" name="Maximum">Max_xp</param>
+                </action>
+                <action id="3" name="Set progress" sid="296901915098359" type="xp_bar">
+                    <param id="0" name="Value">Xp</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="850646527016503">

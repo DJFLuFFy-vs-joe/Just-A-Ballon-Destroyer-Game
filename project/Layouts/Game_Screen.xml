@@ -170,6 +170,27 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="xp_bar" uid="8">
+                    <properties>
+                        <value>0</value>
+                        <maximum>100</maximum>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48.556396484</x>
+                        <y>-0.692871094</y>
+                        <z>0</z>
+                        <width>647.106201172</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
